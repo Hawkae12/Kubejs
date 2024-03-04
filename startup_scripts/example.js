@@ -3,7 +3,7 @@ StartupEvents.registry('item', event => {
     // If you want a custom item model, you can create one in Blockbench and put it in kubejs/assets/kubejs/models/item/test_item.json
     event.create('upgrade_template').displayName("Upgrade Template")
     event.create('title').displayName("Empty Title")
-    event.create("puzzle_key").displayName("Puzzle Key").glow(true)
+    event.create("puzzle_key").displayName("Puzzle Key")
 
     event.create('boolders_sword', 'sword').displayName("Sword Custom 1").tier('Netherite')
 
@@ -16,9 +16,10 @@ StartupEvents.registry("block", (event) => {
     event.create("stone_storage").soundType("stone").redstoneConductor(true).displayName("Chiseled Stone Bricks").blockEntity(entityInfo => {
         entityInfo.inventory(9, 4)
         entityInfo.rightClickOpensInventory()
-    })
-
-    
+    }),
+    event.create("brick_top").displayName("Stone Door").texture("east", "kubejs:block/condoortop"),
+    event.create("brick_bot").displayName("Stone Door").texture("east", "kubejs:block/condoorbot"),
+    event.create("speed_bricks").displayName("Stone Bricks").speedFactor(2.0)
 
 })
 
@@ -27,5 +28,3 @@ StartupEvents.registry("block", (event) => {
 //        block.lightEmission = 5.0
 //      })
  // })
-
- peanut butter
